@@ -1,0 +1,19 @@
+{
+  "name": "hybrid",
+  "version": "1.0.0",
+  "description": "This slides tell why hybrid is needed in some areas, and what is hybrid",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leftstick/hybrid.git"
+  },
+  "keywords": [
+    "hybrid",
+    "slide"
+  ],
+  "author": "Howard.Zuo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leftstick/hybrid/issues"
+  },
+  "homepage": "https://github.com/leftstick/hybrid#readme"
+}

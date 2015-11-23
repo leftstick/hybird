@@ -1,2 +1,2 @@
-# hybird
-This slides tell why hybird is needed in some areas, and what is hybird
+# hybrid
+This slides tell why hybrid is needed in some areas, and what is hybrid

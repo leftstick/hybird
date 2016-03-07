@@ -72,7 +72,7 @@
 				</section>
 
 				<section>
-					<h2>Hybrid is only for mobile?</h2>
+					<h2>Is Hybrid only for mobile?</h2>
 					<p>No, basically desktop is covered as well.</p>
 				</section>
 
@@ -83,8 +83,10 @@
 							<li><a href="http://cordova.apache.org/">cordova</a></li>
 							<li><a href="http://phonegap.com/">PhoneGap</a>(think of a wrapper of cordova)</li>
 							<li><a href="https://www.syncfusion.com/products/orubase">syncfusion</a>(high level wrapper of cordova)</li>
+							<li><a href="http://ionicframework.com/">ionic</a>(high level wrapper of cordova)</li>
 							<li><a href="https://crosswalk-project.org/">crosswalk</a></li>
 							<li><a href="https://software.intel.com/en-us/intel-xdk">intel-xdk</a></li>
+							<li><a href="http://facebook.github.io/react-native/">React Native</a></li>
 							<li><a href="http://www.manifoldjs.com/">manifoldjs</a></li>
 							<li><a href="http://www.apicloud.com/">APICloud</a></li>
 							<li><a href="http://www.appcan.cn/">AppCan</a></li>
@@ -104,40 +106,156 @@
 
 				<section>
 					<section>
-					    <h2>What shall we do today?</h2>
-                        <p>We are going to create a desktop app in few minutes</p>
+						<h1>How Hybrid works?</h1>
+					</section>
+
+					<section>
+						<h3 style="margin-bottom: 0;">Render with web engine</h3>
+						<img src="img/renderwithweb.jpg" alt="">
+					</section>
+
+					<section>
+						<h3 style="margin-bottom: 0;">Render with nativeUI</h3>
+						<img src="img/reactnative01.png" alt="">
 					</section>
 					<section>
-					    <p>Install <code>generator-electron-naive</code></p>
+						<img src="img/reactnative02.png" alt="">
+					</section>
+
+				</section>
+
+				<section>
+					<h2>What shall we do today?</h2>
+					<p>We are going to create few apps in next minutes</p>
+				</section>
+
+				<section>
+					<section>
+						<h1>Try ionic</h1>
+					</section>
+
+					<section>
 						<pre><code class="bash" data-trim>
+#install ionic and cordova
+
+[sudo] npm install -g cordova ionic ios-sim
+						</code></pre>
+
+						<pre><code class="bash" data-trim>
+#create app via ionic generator
+
+ionic start ionic-app sidemenu
+						</code></pre>
+
+						<pre><code class="bash" data-trim>
+#add platform support
+
+cd ionic-app
+ionic platform add ios
+ionic platform add android
+						</code></pre>
+
+						<pre><code class="bash" data-trim>
+#compile source
+
+ionic build [ios/android]
+						</code></pre>
+
+						<pre><code class="bash" data-trim>
+#debug
+
+ionic emulate ios  --livereload #for ios
+ionic run android  --livereload #for android
+						</code></pre>
+					</section>
+
+					<section>
+						<img src="img/ionic-ios.png" alt="">
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h1>Try React Native</h1>
+					</section>
+
+					<section>
+						<pre><code class="bash" data-trim>
+#install react-native
+
+[sudo] npm install -g react-native-cli
+						</code></pre>
+
+						<pre><code class="bash" data-trim>
+#create app via react-native-cli
+
+react-native init rnApp
+						</code></pre>
+
+						<pre><code class="bash" data-trim>
+#debug for ios
+
+cd rnApp
+open ios/rnApp.xcodeproj # open projcect via xcode
+						</code></pre>
+
+						<pre><code class="bash" data-trim>
+#debug for android
+
+cd rnApp
+react-native run-android
+						</code></pre>
+					</section>
+
+					<section>
+						<img src="img/react-native-android.png" alt="">
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h1>Try electron</h1>
+					</section>
+					<section>
+						<pre><code class="bash" data-trim>
+#install generator-electron-naive
+
 npm install -g generator-electron-naive #use sudo if you are on *nix OS
 						</code></pre>
-						<p>Create project with <code>generator-electron-naive</code></p>
+
 						<pre><code class="bash" data-trim>
+#create app via generator-electron-naive
 yo electron-naive #answer following questions
 						</code></pre>
+
 						<img src="img/questions.png" alt="">
 						<p><color style="color: green;">✔</color> Project generated!!!</p>
 					</section>
 					<section>
-					    <p>Move into the created project</p>
 						<pre><code class="bash" data-trim>
+#godo test-project
+
 cd test-project #the name might be different in you case
 						</code></pre>
-						<p>Generate executable app</p>
 						<pre><code class="bash" data-trim>
+#generator desktop executable app
+
 npm start #the same as "gulp"
 						</code></pre>
 						<img src="img/generated.png" alt="">
 						<p>Executable app generated!!!</p>
-						<p>Try finding it at <code>dist/v0.35.1/</code></p>
+						<p>Try finding it at <code>dist/v0.36.10/</code></p>
+					</section>
+
+					<section>
+						<img src="img/electron.png" alt="">
 					</section>
 				</section>
 
 				<section style="text-align: left;">
-					<h1>THE END</h1>
+					<h3>Welcome to Hybrid world</h3>
 					<p>
-						- <a href="https://www.npmjs.com/package/generator-electron-naive">Try generator-electron-naive</a> <br>
+						- <a href="https://www.npmjs.com/package/generator-electron-naive">generator-electron-naive</a> <br>
 					</p>
 				</section>
 
